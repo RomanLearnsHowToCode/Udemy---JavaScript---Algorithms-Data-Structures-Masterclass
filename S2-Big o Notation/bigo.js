@@ -38,9 +38,9 @@ function addUpTo2(n){
 // timing function
 let t12 = performance.now();
 //addUpTo(100000000);
-addUpTo2(100000000);
+//addUpTo2(100000000);
 let t22 = performance.now();
-console.log(t22-t12) / 1000;
+//console.log(t22-t12) / 1000;
 
 // Date.now() is also timing function, this one works in node without import
 /*
@@ -51,3 +51,52 @@ console.log(t2 - t1 * 1000);
 */
 
 // the result is that first addUpTo function takes 2 seconds to finalise, the second AddUpTo2 functions takes 0.05 seconds!
+
+// when we are talking about Big O we are talking about the worst case scenario
+
+// function countUpandDown
+
+function countUpAndDown(n) {
+    console.log("Going up!");
+    for (let i = 0; i < n; i++) {
+      console.log(i);
+    }
+    console.log("At the top!\nGoing Down...");
+    for (let j = n -1; j >= 0; j--) {
+      console.log(j);
+    }
+    console.log("Back down. Bye!");
+  }
+  countUpAndDown(10);
+
+  // big O for this function is O(n) going up, O(n) going down
+
+  // function printAllPairs()
+
+  function printAllPairs(n) {
+      for (var i = 0; i < n; i++){
+          for (var j = 0; j < n; j++){
+              console.log(i,j);
+          }
+      }
+  }
+  printAllPairs(10);
+
+  // O(n) & O(n) nested loop O (n*n) = N squared
+
+
+  // Simplifiying Big O expressions
+  /* 
+  1)Arithmetic operations are constant
+  2)Variable assignment is constant
+  3)Accesing elements in an array (by index) or object (by key) is constant
+  4)In a loop, the complexity is the lenght of the loop times the complexity of whatever happens inside of the loop  
+  */
+
+  function logAtLeast5(n){
+    for (var i = 1; i <= Math.max(5,n); i++){
+        console.log(i);
+    }
+  }
+
+  logAtLeast5(4);
