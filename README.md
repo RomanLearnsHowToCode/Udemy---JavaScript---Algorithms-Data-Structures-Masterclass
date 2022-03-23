@@ -18,8 +18,12 @@ Section 2: Big O Notation
 - Describe what a logarithm is
 
 - We can measure the performance of algorithm by time or by amount of operations
+- Space complexity is about variables, how many of them are being created etc
+
 
 - Section 3: Analyzing Performance of Arrays and Objects
+
+
   Section 4: Problem Solving Approach
   Section 5: Problem Solving Patterns
   Section 6: Optional Challenges

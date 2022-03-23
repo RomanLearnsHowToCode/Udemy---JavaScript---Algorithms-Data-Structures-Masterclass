@@ -100,3 +100,50 @@ function countUpAndDown(n) {
   }
 
   logAtLeast5(4);
+
+  // Space complexity (auxiliary complexity)
+  /*
+  Most primitives - booleans, numbers, undefined, null are constant space
+  Strings require O(n) space (where n is the string lenght)
+  Reference types are generally O(n), where n is the lenght (for arrays) or the number of keys (for object)
+  */
+
+  // example
+  function sum(arr) {
+      let total = 0; // one number
+      for (let i = 0; i < arr.length; i++) { // i is another number
+          total += arr[i];
+      }
+      return total;
+  }
+
+  //O(1) space complexity ^^
+
+
+  // another example
+  function double(arr) {
+      let newArr = [];
+      for(let i=0; i < arr.length; i++) {
+          newArr.push(2 * arr[i]);
+      }
+    return newArr;
+  }
+
+  // this algorithm is creating new array, line 127, which is getting longer in proportion of the 124 parameter O(n)
+
+/* What is logarithm?
+  log2(8) = 3 - 2 to what power equals 8? 3 2*2*2 = 8
+ log measures how many times you can divide that number by 2 until you will get 1.
+ logarithmic time complexity is great!
+*/
+
+/*
+RECAP:
+
+- To analyze the performance of an algorithm, we use Big O Notation
+- Big O Notation can give us a high level understanding of the time or space complexity of an algorithm
+- Big O Notation doesn't care about precision, only about general trends (linear? quadratic? constant?)
+- The time or space complexity (as measured by Big O) depends only on the algorithm, not the hardware used to run the algorithm
+- Big O Notation is everywhere, so gets lots of practice!
+
+*/
